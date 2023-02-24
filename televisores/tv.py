@@ -32,9 +32,10 @@ class TV:
 		
 		return self.canal
 
-	def getNumTV(self):
+	@classmethod
+	def getNumTV(cls):
 		
-		return self.numTV
+		return cls.numTV
 
 	def getEstado(self):
 		
