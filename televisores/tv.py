@@ -9,7 +9,6 @@ class TV:
 		self.canal=1
 		self.volumen=1
 		self.precio=500
-
 		self.numTV+=1
 
 
@@ -55,7 +54,7 @@ class TV:
 
 	def setVolumen(self,volumen):
 
-		if 0<=self.volumen<=7 and self.estado:
+		if 0<=volumen<=7 and self.estado:
 		
 			self.volumen=volumen
 
@@ -64,6 +63,11 @@ class TV:
 		if 0<=canal<=120 and self.estado:
 		
 			self.canal=canal
+
+	@classmethod
+	def setNumTV(cls,numTV):
+		
+		cls.numTV=numTV
 
 	def turnOn(self):
 		
@@ -81,7 +85,7 @@ class TV:
 
 	def canalDown(self):
 
-		if canal>0 and estado:
+		if self.canal>0 and self.estado:
 		
 			self.canal-=1
 
