@@ -9,8 +9,12 @@ class TV:
 		self.canal=1
 		self.volumen=1
 		self.precio=500
-		self.numTV+=1
+		self.aumentar()
+		
 
+	@classmethod
+	def aumentar(cls):
+		cls.numTV+=1
 
 	def getMarca(self):
 		
